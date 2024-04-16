@@ -19,7 +19,7 @@ class UpgradeManager:
     def __copyAndCompareFiles(self, originalFilePath, newFilePath, keepconf):
         configFileName = basename(newFilePath)
         if filecmp.cmp(originalFilePath, newFilePath, shallow=False):
-            self.logger.info('Configuration file [{}] do not need to be updated'.format(configFileName))
+            self.logger.info('Configuration file [{}] does not need to be updated'.format(configFileName))
         else:
             self.logger.info('Configuration file [{}] needs to be updated'.format(configFileName))
 
